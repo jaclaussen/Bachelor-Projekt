@@ -7,7 +7,7 @@ git add Dateiname oder *(für alle Änderungen)
 Dann folgt der Commit, hier eine kurze Nachricht was bearbeitet wurde:
 git commit -m "Nachricht"
 Dann folgt der Push auf das Repository:
-git push
+git push origin master
 
 Wenn ihr für euch Programmiert, ist es sinnvoll dies auf einen eigenen Branch zu tun.
 Erstellt wird dieser über:
