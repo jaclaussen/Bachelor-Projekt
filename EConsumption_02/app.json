@@ -1,0 +1,18 @@
+{
+  "domElement": "<econsumption02></econsumption02>",
+  "name": "E Consumption 02",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "description": "e consumption 02",
+  "css": {
+    "bottom": "0px",
+    "height": "450px",
+    "width": "220px",
+    "right": "0px"
+  },
+  "preserveAspectRatio": false,
+  "author": "ingenieurpsychologie",
+  "version": "0.1",
+  "directive": "econsumption02"
+}
