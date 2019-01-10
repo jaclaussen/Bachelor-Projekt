@@ -1,0 +1,17 @@
+{
+  "name" : "ui.apps.compass.name",
+  "author": "Alexander Danetzky",
+  "version": "0.1",
+  "description": "Das Farbradial",
+  "directive": "compass",
+  "domElement": "<compass></compass>",
+  "types": [
+    "ui.apps.categories.vehicle_info"
+  ],
+  "css": {
+    "bottom": "20px",
+    "height": "350px",
+    "width": "350px",
+    "right": "0px"},
+    "preserveAspectRatio": true,  
+}

@@ -1,0 +1,5 @@
+Die Dateien in das Verzeichnis BeamNG/research/ui/apps/Compass kopieren.
+
+Dann im Spiel die UI-Mod Compass hinzufügen.
+
+In den Pics Ordner können unsere zu verwendenen Bilder reinkopiert werden.
