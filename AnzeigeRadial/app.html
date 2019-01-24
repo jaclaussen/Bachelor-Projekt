@@ -1,0 +1,42 @@
+<div style="width:100%; height:100%">
+	<svg style="width:100%; height:100%">
+		<!--Background of RadialGauge-->
+		<g>
+		<g style="transform:rotateX(60deg)" x="50%" y="50%">
+		<circle id="radBG" r="100" cx="180" cy="180" stroke="grey"  stroke-width="40"
+		stroke-dasharray="314 628"  fill="none" transform="rotate(180,180,180)"></circle>
+
+		<!--RadialGauge optical Value-->
+		<circle id="radVG" r="100" cx="180" cy="180" stroke="blue"  stroke-width="40"
+		stroke-dasharray="{{ rad }} 628" fill="none" transform="rotate(180,180,180)" ></circle>
+
+		<!--RadialGauge Indicator-->
+		<circle id="indicator" r="100" cx="180" cy="180" stroke="darkred"  stroke-width="50"
+		stroke-dasharray="10 628"  fill="none" transform="rotate({{ indic }},180,180)"></circle>
+
+		<circle id="first" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(180,180,180)" stroke="{{ first }}"  stroke-width="40"></circle>
+		<circle id="second" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(206.2,180,180)" stroke="{{ second }}"  stroke-width="40"></circle>
+		<circle id="third" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(232.4,180,180)" stroke="{{ third }}"  stroke-width="40"></circle>
+		<circle id="fourth" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(258.6,180,180)" stroke="{{ fourth }}"  stroke-width="40"></circle>
+		<circle id="fifth" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(284.8,180,180)" stroke="{{ fifth }}"  stroke-width="40"></circle>
+		<circle id="sixth" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(311,180,180)"stroke="{{ sixth }}"  stroke-width="40"></circle>
+		<circle id="seventh" stroke-dasharray="60 911" r="145" cx="180" cy="180"
+		fill="none" transform="rotate(337.2,180,180)" stroke="{{ seventh }}"  stroke-width="40"></circle>
+		</g>
+
+
+		<!-- Textfields -->
+		<text id="energy" x="37%" y="50%" font-size="50" fill="white" align="right">{{ verbrauch }}</text>
+		<text x="54%" y="50%" font-size="30" fill="white" align="right">kW</text>
+		</g>
+		</svg>
+	<svg style="width:100%; height:100%">
+		
+	</svg>
+</div>

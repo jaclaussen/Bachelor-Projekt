@@ -12,7 +12,7 @@ angular.module('beamng.apps')
 				$scope.$evalAsync(function () {
 					if (data.energie.en) {
 						var consumption = data.energie.en
-            var energy = ((data.energie.en/18000*100)*468)*3.9
+            var energy = ((data.energie.en/18000*100)*468)
             var n = 468 - (energy/100)
 						//If-Statement to catch the >0 values
 						if (data.energie.en>0) {

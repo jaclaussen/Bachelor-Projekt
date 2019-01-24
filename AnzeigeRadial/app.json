@@ -1,0 +1,18 @@
+{
+  "domElement": "<anzeige-radial></anzeige-radial>",
+  "name": "AnzeigeRadial",
+  "types": [
+    "ui.apps.categories.vehicle_control"
+  ],
+  "description": "An app to precisely set and control the speed of a vehicle",
+  "css": {
+    "left": "20px",
+    "height": "200px",
+    "top": "100px",
+    "width": "360px"
+  },
+  "author": "Alexander Danetzky",
+  "version": "0.1",
+  "preserveAspectRatio" : true,
+  "directive": "anzeigeRadial"
+}
