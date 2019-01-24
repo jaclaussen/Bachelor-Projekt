@@ -29,7 +29,7 @@ angular.module('beamng.apps')
             $scope.fourth = "#FFFF1E"
             $scope.fifth = "#FFFF1E"
             $scope.sixth = "#FF1215"
-            $scope.seventh = "#800000"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en > 10284) {
             $scope.first = "#1A79FF"
@@ -37,8 +37,8 @@ angular.module('beamng.apps')
             $scope.third = "#FFFF1E"
             $scope.fourth = "#FFFF1E"
             $scope.fifth = "#FFFF1E"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en > 7713) {
             $scope.first = "#1A79FF"
@@ -46,8 +46,8 @@ angular.module('beamng.apps')
             $scope.third = "#FFFF1E"
             $scope.fourth = "#FFFF1E"
             $scope.fifth = "#7B8000"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en > 5142) {
             $scope.first = "#1A79FF"
@@ -55,8 +55,8 @@ angular.module('beamng.apps')
             $scope.third = "#FFFF1E"
             $scope.fourth = "#7B8000"
             $scope.fifth = "#7B8000"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en > 2571) {
             $scope.first = "#1A79FF"
@@ -64,8 +64,8 @@ angular.module('beamng.apps')
             $scope.third = "#7B8000"
             $scope.fourth = "#7B8000"
             $scope.fifth = "#7B8000"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en > 1) {
             $scope.first = "#1A79FF"
@@ -73,8 +73,8 @@ angular.module('beamng.apps')
             $scope.third = "#7B8000"
             $scope.fourth = "#7B8000"
             $scope.fifth = "#7B8000"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }else
           if (data.energie.en <= 1) {
             $scope.first = "#000080"
@@ -82,8 +82,8 @@ angular.module('beamng.apps')
             $scope.third = "#7B8000"
             $scope.fourth = "#7B8000"
             $scope.fifth = "#7B8000"
-            $scope.sixth = "#800000"
-            $scope.seventh = "#800000"
+            $scope.sixth = "#000066"
+            $scope.seventh = "#000066"
           }
 					if (data.energie.en) {
 						var consumption = data.energie.en
@@ -99,7 +99,7 @@ angular.module('beamng.apps')
               $scope.verbrauch = 0;
 						}
 
-						
+
 					}
 				});
 			});
