@@ -93,7 +93,11 @@ angular.module('beamng.apps')
               $scope.indic = data.energie.en/105+180
               //Sends the energyusage in kW to the html
 						  $scope.verbrauch = Math.round(consumption/1000);}
-						else {
+						else if (data.energie.en>18000){
+              $scope.rad = 314;
+              $scope.indic = 351;
+              $scope.verbrauch = 18;
+            } else {
 							$scope.rad = 0;
               $scope.indic = 180;
               $scope.verbrauch = 0;
