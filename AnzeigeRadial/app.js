@@ -90,7 +90,7 @@ angular.module('beamng.apps')
 						//If-Statement to catch the >0 values
 						if (data.energie.en>0) {
 						  $scope.rad = data.energie.en/18000*314
-              $scope.indic = data.energie.en/105+180
+              $scope.indic = data.energie.en/100+180
               //Sends the energyusage in kW to the html
 						  $scope.verbrauch = Math.round(consumption/1000);}
 						else if (data.energie.en>18000){
