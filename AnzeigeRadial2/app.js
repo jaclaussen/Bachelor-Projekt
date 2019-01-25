@@ -10,9 +10,6 @@ angular.module('beamng.apps')
       var con1 = 0;
       var con2 = 1;
       var con3 = 3;
-      var con4 = 2;
-      var con5 = 3;
-      var con6 = 3;
 			StreamsManager.add(streamsList);
 			$scope.indic = "180";
       $scope.rad = "0";
