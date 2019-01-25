@@ -8,6 +8,9 @@ angular.module('beamng.apps')
 	controller: ['$log', '$scope', 'bngApi', 'StreamsManager', function ($log, $scope, bngApi, StreamsManager) {
 			var streamsList = ['energie'];
 			StreamsManager.add(streamsList);
+      $scope.indic = "268";
+      $scope.rad = "468";
+      $scope.verbrauch = "0";
 			$scope.$on('streamsUpdate', function (event, data) {
 				$scope.$evalAsync(function () {
 					if (data.energie.en) {
@@ -17,18 +20,16 @@ angular.module('beamng.apps')
 						//If-Statement to catch the >0 values
 						if (data.energie.en>0) {
               $scope.rad = n;
-              $scope.indi1= n+5;
-              $scope.indi2= n-5;
+              $scope.indic = 268 - (energy*0.576/100);
               if(n < 0){
-                $scope.rad =0
-
+                $scope.rad = 0
+                $scope.indic = 0
               }
 
             //Energy smaller zero, mask full
             }else if (energy < 0){
 							$scope.rad = 468;
-              $scope.indic = 180;
-            //If rad(mask) smaller zero, show zero
+              $scope.indic = 268;
             }
 
 						//Sends the energyusage in kW to the html
