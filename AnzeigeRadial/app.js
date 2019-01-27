@@ -6,14 +6,21 @@ angular.module('beamng.apps')
     restrict: 'EA',
     scope: true,
 	controller: ['$log', '$scope', 'bngApi', 'StreamsManager', function ($log, $scope, bngApi, StreamsManager) {
-			var streamsList = ['energie'];
+      var streamsList = ['energie'];
+      var con1 = 0;
+      var con2 = 1;
+      var con3 = 3;
 			StreamsManager.add(streamsList);
 			$scope.indic = "180";
       $scope.rad = "0";
       $scope.verbrauch = "0";
 			$scope.$on('streamsUpdate', function (event, data) {
 				$scope.$evalAsync(function () {
-          if (data.energie.en > 15426) {
+            con3 = con2;
+            con2 = con1;
+            con1 = data.energie.en;
+            var mid = (con1+con2+con3)/3;
+          if (mid > 154260) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#FFFF1E"
@@ -22,7 +29,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#FF1215"
             $scope.seventh = "#FF1215"
           }else
-          if (data.energie.en > 12855) {
+          if (mid > 128550) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#FFFF1E"
@@ -31,7 +38,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#FF1215"
             $scope.seventh = "#800000"
           }else
-          if (data.energie.en > 10284) {
+          if (mid > 102840) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#FFFF1E"
@@ -40,7 +47,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#800000"
             $scope.seventh = "#800000"
           }else
-          if (data.energie.en > 7713) {
+          if (mid > 77130) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#FFFF1E"
@@ -49,7 +56,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#800000"
             $scope.seventh = "#800000"
           }else
-          if (data.energie.en > 5142) {
+          if (mid > 51420) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#FFFF1E"
@@ -58,7 +65,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#800000"
             $scope.seventh = "#800000"
           }else
-          if (data.energie.en > 2571) {
+          if (data.energie.en > 25710) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
             $scope.third = "#7B8000"
@@ -86,26 +93,30 @@ angular.module('beamng.apps')
             $scope.seventh = "#800000"
           }
 					if (data.energie.en) {
-						var consumption = data.energie.en
-						//If-Statement to catch the >0 values
-						if (data.energie.en>0) {
-						  $scope.rad = data.energie.en/18000*314
-              $scope.indic = data.energie.en/100+180
-              //Sends the energyusage in kW to the html
-						  $scope.verbrauch = Math.round(consumption/1000);}
-						else if (data.energie.en>18000){
+            var consumption = data.energie.en;
+            //If-Statement to catch the >18000 values
+            if (data.energie.en>180000){
               $scope.rad = 314;
               $scope.indic = 351;
-              $scope.verbrauch = 18;
+              $scope.verbrauch = 180;
+            //If-Statement to use the average for a better animation
+            }else if(data.energie.en>16000){
+              $scope.rad = mid/180000*314;
+              $scope.indic = mid/1000+180;
+              $scope.verbrauch = Math.round(mid/1000);
+            // If-Statement for the values 0-6000
+            }else if (data.energie.en>0) {
+						  $scope.rad = data.energie.en/180000*314
+              $scope.indic = data.energie.en/100+180
+              $scope.verbrauch = Math.round(consumption/1000);
+            //Else-Statement for Values below 0
             } else {
 							$scope.rad = 0;
               $scope.indic = 180;
               $scope.verbrauch = 0;
 						}
-
-
 					}
-				});
+        });
 			});
 			$scope.$on('$destroy', function () {
 				StreamsManager.remove(streamsList);
