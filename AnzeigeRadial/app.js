@@ -18,7 +18,9 @@ angular.module('beamng.apps')
 				$scope.$evalAsync(function () {
             con3 = con2;
             con2 = con1;
-            con1 = data.energie.en;
+            if(data.energie.en>0){
+            con1 = data.energie.en;}
+            else {con1 = 0;}
             var mid = (con1+con2+con3)/3;
           if (mid > 154260) {
             $scope.first = "#1A79FF"
@@ -93,22 +95,16 @@ angular.module('beamng.apps')
             $scope.seventh = "#800000"
           }
 					if (data.energie.en) {
-            var consumption = data.energie.en;
             //If-Statement to catch the >18000 values
             if (data.energie.en>180000){
               $scope.rad = 314;
               $scope.indic = 351;
               $scope.verbrauch = 180;
             //If-Statement to use the average for a better animation
-            }else if(data.energie.en>16000){
+            }else if(data.energie.en>=0){
               $scope.rad = mid/180000*314;
               $scope.indic = mid/1000+180;
               $scope.verbrauch = Math.round(mid/1000);
-            // If-Statement for the values 0-6000
-            }else if (data.energie.en>0) {
-						  $scope.rad = data.energie.en/180000*314
-              $scope.indic = data.energie.en/100+180
-              $scope.verbrauch = Math.round(consumption/1000);
             //Else-Statement for Values below 0
             } else {
 							$scope.rad = 0;
