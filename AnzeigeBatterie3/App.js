@@ -22,7 +22,7 @@ angular.module('beamng.apps')
           var mid = (con1+con2+con3)/3;
 					if (data.energie.en) {
 						var consumption = mid
-            var energy = ((mid/18000*100)*468)
+            var energy = ((mid/180000*100)*468)
             var n = 468 - (energy/100)
 						//If-Statement to catch the >0 values
 						if (data.energie.en>0) {
