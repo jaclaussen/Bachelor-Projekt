@@ -32,6 +32,10 @@ angular.module('beamng.apps')
             else {con1 = 0;}
             //calculation of the average of the data.energie.en value
             var mid = (con1+con2+con3)/3;
+            //if-statement to set the colors of the different light-segments
+            //the max value of 180000 is devided by seven to get the range of each segment
+
+            //every light-segment is shining
           if (mid > 154260) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
@@ -41,6 +45,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#FF1215"
             $scope.seventh = "#FF1215"
           }else
+          //every light-segment except the seventh is shining
           if (mid > 128550) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
@@ -50,6 +55,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#FF1215"
             $scope.seventh = "#800000"
           }else
+          //every light-segment except seven and six is shining
           if (mid > 102840) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
@@ -59,6 +65,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#800000"
             $scope.seventh = "#800000"
           }else
+          //...
           if (mid > 77130) {
             $scope.first = "#1A79FF"
             $scope.second = "#1A79FF"
@@ -95,6 +102,7 @@ angular.module('beamng.apps')
             $scope.sixth = "#800000"
             $scope.seventh = "#800000"
           }else
+          //non of the light-segments are shining
           if (data.energie.en <= 1) {
             $scope.first = "#000066"
             $scope.second = "#000066"
@@ -119,7 +127,7 @@ angular.module('beamng.apps')
               $scope.indic = mid/1000+180;
               $scope.verbrauch = Math.round(mid/1000);
             /*Else-Statement for Values below 0
-            Sets the Values of rad, indic and verbrauch to the wanted min*/ 
+            Sets the Values of rad, indic and verbrauch to the wanted min*/
             } else {
 							$scope.rad = 0;
               $scope.indic = 180;
